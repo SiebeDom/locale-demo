@@ -8,6 +8,13 @@
     ],
     "frameworksBackend": {
       "region": "europe-west1"
-    }
+    },
+    "redirects": [
+      {
+        "source": "/",
+        "destination": "https://www.example.com",
+        "type": 301
+      }
+    ]
   }
 }
