@@ -68,6 +68,15 @@
               "optimization": false,
               "extractLicenses": false,
               "sourceMap": true
+            },
+            "nl": {
+              "localize": ["nl"]
+            },
+            "fr": {
+              "localize": ["fr"]
+            },
+            "en": {
+              "localize": ["en"]
             }
           },
           "defaultConfiguration": "production"
@@ -82,13 +91,13 @@
               "buildTarget": "locale-demo:build:development"
             },
             "nl": {
-              "localize": ["nl"]
+              "buildTarget": "locale-demo:build:development,nl"
             },
             "fr": {
-              "localize": ["fr"]
+              "buildTarget": "locale-demo:build:development,fr"
             },
             "en": {
-              "localize": ["en"]
+              "buildTarget": "locale-demo:build:development,en"
             }
           },
           "defaultConfiguration": "development"
