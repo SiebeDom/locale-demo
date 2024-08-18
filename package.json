@@ -11,7 +11,7 @@
     "start:en": "ng serve --configuration en",
     "start:fr": "ng serve --configuration fr",
     "extract-i18n-and-merge": "ng extract-i18n --output-path src/locale && xliffmerge --profile xliffmerge.json nl fr en",
-    "deploy:production": "firebase use default && ng build --localize --configuration=production && firebase deploy --only hosting --public ./dist"
+    "deploy:production": "firebase use default && ng build --localize --configuration=production && firebase deploy --only hosting --public ./dist/locale-demo/browser"
   },
   "private": true,
   "dependencies": {
