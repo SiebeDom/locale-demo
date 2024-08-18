@@ -26,8 +26,7 @@
     "@angular/router": "^17.0.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
-    "zone.js": "~0.14.2",
-    "extract-i18n-and-merge": "ng extract-i18n --output-path src/locale && xliffmerge --profile xliffmerge.json nl fr en"
+    "zone.js": "~0.14.2"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^17.0.0",
