@@ -4,9 +4,14 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build --localize",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "start:nl": "ng serve --configuration nl",
+    "start:en": "ng serve --configuration en",
+    "start:fr": "ng serve --configuration fr",
+    "extract-i18n-and-merge": "ng extract-i18n --output-path src/locale && xliffmerge --profile xliffmerge.json nl fr en",
+    "deploy:production": "firebase use staging && ng build --localize --configuration=production && firebase deploy --only hosting --public ./dist"
   },
   "private": true,
   "dependencies": {
@@ -21,7 +26,8 @@
     "@angular/router": "^17.0.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
-    "zone.js": "~0.14.2"
+    "zone.js": "~0.14.2",
+    "extract-i18n-and-merge": "ng extract-i18n --output-path src/locale && xliffmerge --profile xliffmerge.json nl fr en"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^17.0.0",
@@ -34,6 +40,7 @@
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
-    "typescript": "~5.2.2"
+    "typescript": "~5.2.2",
+    "ngx-i18nsupport": "^0.17.1"
   }
 }

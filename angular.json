@@ -10,15 +10,31 @@
       "sourceRoot": "src",
       "prefix": "app",
       "i18n": {
-        "sourceLocale": "nl-BE"
+        "sourceLocale": "nl-BE",
+        "locales": {
+          "nl": {
+            "translation": "src/locale/messages.nl.xlf",
+            "baseHref": "nl/"
+          },
+          "en": {
+            "translation": "src/locale/messages.en.xlf",
+            "baseHref": "en/"
+          },
+          "fr": {
+            "translation": "src/locale/messages.fr.xlf",
+            "baseHref": "fr/"
+          }
+        }
       },
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:browser",
+          "builder": "@angular-devkit/build-angular:application",
           "options": {
             "outputPath": "dist/locale-demo",
             "index": "src/index.html",
-            "main": "src/main.ts",
+            "localize": true,
+            "i18nMissingTranslation": "warning",
+            "browser": "src/main.ts",
             "polyfills": [
               "zone.js"
             ],
@@ -64,6 +80,15 @@
             },
             "development": {
               "buildTarget": "locale-demo:build:development"
+            },
+            "nl": {
+              "localize": ["nl"]
+            },
+            "fr": {
+              "localize": ["fr"]
+            },
+            "en": {
+              "localize": ["en"]
             }
           },
           "defaultConfiguration": "development"

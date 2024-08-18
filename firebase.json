@@ -8,6 +8,23 @@
     ],
     "frameworksBackend": {
       "region": "europe-west1"
+    },
+    "rewrites": [
+      {
+        "source": "/en{,/**}",
+        "destination": "/en/index.html"
+      },
+      {
+        "source": "/nl{,/**}",
+        "destination": "/nl/index.html"
+      },
+      {
+        "source": "/fr{,/**}",
+        "destination": "/fr/index.html"
+      }
+    ],
+    "i18n": {
+      "root": "/"
     }
   }
 }
