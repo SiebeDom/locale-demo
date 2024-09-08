@@ -4,7 +4,7 @@ import { provideRouter } from '@angular/router';
 import { routes } from './app.routes';
 import {registerLocaleData} from "@angular/common";
 
-import localeNl from "@angular/common/locales/nl";
+import localeEn from "@angular/common/locales/en";
 
 
 export const appConfig: ApplicationConfig = {
@@ -12,4 +12,4 @@ export const appConfig: ApplicationConfig = {
     {provide: LOCALE_ID, useValue: 'nl-BE' }]
 };
 
-registerLocaleData(localeNl, "nl");
+registerLocaleData(localeEn, "en");
