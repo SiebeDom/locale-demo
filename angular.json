@@ -7,13 +7,13 @@
       "i18n": {
         "sourceLocale": "nl-BE",
         "locales": {
-          "nl": {
-            "translation": "src/locale/messages.nl.xlf",
-            "baseHref": "nl/"
-          },
           "en": {
             "translation": "src/locale/messages.en.xlf",
             "baseHref": "en/"
+          },
+          "nl": {
+            "translation": "src/locale/messages.nl.xlf",
+            "baseHref": "nl/"
           },
           "fr": {
             "translation": "src/locale/messages.fr.xlf",
