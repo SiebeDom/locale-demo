@@ -5,8 +5,12 @@
   "projects": {
     "locale-demo": {
       "i18n": {
-        "sourceLocale": "en-US",
+        "sourceLocale": "nl-BE",
         "locales": {
+          "nl": {
+            "translation": "src/locale/messages.nl.xlf",
+            "baseHref": "nl/"
+          },
           "en": {
             "translation": "src/locale/messages.en.xlf",
             "baseHref": "en/"

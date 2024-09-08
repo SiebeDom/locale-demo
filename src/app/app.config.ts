@@ -1,15 +1,15 @@
 import {ApplicationConfig, LOCALE_ID} from '@angular/core';
-import { provideRouter, withDebugTracing } from '@angular/router';
+import { provideRouter } from '@angular/router';
 
 import { routes } from './app.routes';
 import {registerLocaleData} from "@angular/common";
 
-import localeEn from "@angular/common/locales/en";
+import localeNl from "@angular/common/locales/nl";
 
 
 export const appConfig: ApplicationConfig = {
-  providers: [provideRouter(routes, withDebugTracing()),
-    {provide: LOCALE_ID, useValue: 'en-US' }]
+  providers: [provideRouter(routes),
+    {provide: LOCALE_ID, useValue: 'nl-BE' }]
 };
 
-registerLocaleData(localeEn, "en");
+registerLocaleData(localeNl, "nl");
