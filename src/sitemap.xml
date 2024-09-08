@@ -11,6 +11,7 @@
     <xhtml:link href="https://www.siebetest.be/fr/" rel="alternate" hreflang="fr" />
     <xhtml:link href="https://www.siebetest.be/en/" rel="alternate" hreflang="en" />
     <xhtml:link href="https://www.siebetest.be/nl/" rel="alternate" hreflang="nl" />
+    <xhtml:link href="https://www.siebetest.be/nl/" rel="alternate" hreflang="x-default" />
   </url>
   <url>
     <loc>https://www.siebetest.be/fr/</loc>
