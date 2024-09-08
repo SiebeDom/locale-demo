@@ -5,7 +5,7 @@
   "projects": {
     "locale-demo": {
       "i18n": {
-        "sourceLocale": "nl-BE",
+        "sourceLocale": "en-US",
         "locales": {
           "en": {
             "translation": "src/locale/messages.en.xlf",

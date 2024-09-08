@@ -9,7 +9,7 @@ import localeEn from "@angular/common/locales/en";
 
 export const appConfig: ApplicationConfig = {
   providers: [provideRouter(routes),
-    {provide: LOCALE_ID, useValue: 'nl-BE' }]
+    {provide: LOCALE_ID, useValue: 'en-US' }]
 };
 
 registerLocaleData(localeEn, "en");
