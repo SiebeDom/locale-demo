@@ -24,7 +24,8 @@ export class AppComponent implements OnInit {
   }
 
   setCanonicalAndAlternateLinks(path: string) {
-    const lang = this.router.url.split('/')[2];  // Get the language from the URL
+    const url = window.location.href; // Get the full URL
+    const lang = url.split('/')[3]; // Extract the language code (e.g., 'fr')
     let canonicalUrl = `https://www.siebetest.be/${lang}/`;
     console.log('Lang is: ' + lang)
     console.log('this.router.url is: ' + this.router.url)
