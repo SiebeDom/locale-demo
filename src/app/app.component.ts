@@ -1,4 +1,4 @@
-import { Component, OnInit, inject } from '@angular/core';
+import { Component, Inject, LOCALE_ID, OnInit, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Router, RouterOutlet } from '@angular/router';
 import { Meta, Title } from '@angular/platform-browser';
@@ -16,7 +16,7 @@ export class AppComponent implements OnInit {
   private meta = inject(Meta); 
   private router = inject(Router);
 
-  constructor(){
+  constructor(@Inject(LOCALE_ID) public locale: string){
   }
 
   ngOnInit() {
@@ -24,12 +24,12 @@ export class AppComponent implements OnInit {
   }
 
   setCanonicalAndAlternateLinks(path: string) {
-    const lang = this.router.url.split('/')[1];  // Get the language from the URL
-    let canonicalUrl = `https://www.siebetest.be/${lang}/`;
-    console.log('Lang is: ' + lang)
+    //const lang = this.router.url.split('/')[1];  // Get the language from the URL
+    let canonicalUrl = `https://www.siebetest.be/${this.locale}/`;
+    console.log('Lang is: ' + this.locale)
     console.log('this.router.url is: ' + this.router.url)
 
-    if (!['nl', 'fr', 'en'].includes(lang)) {
+    if (!['nl', 'fr', 'en'].includes(this.locale)) {
       canonicalUrl = `https://www.siebetest.be/nl/${path}`;
     }
     console.log('canonicalUrl is: ' + canonicalUrl)
