@@ -12,10 +12,6 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: npm ci && npm run build
-      - name: Show dist structure
-        run: |
-          echo "== ls -R dist =="
-          ls -R dist
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: ${{ secrets.GITHUB_TOKEN }}
